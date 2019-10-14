@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: hello
+          uri: http://www.baidu.com
+          predicates:
+            - Path=/hello2
+          filters:
+            - StripPrefix=1
